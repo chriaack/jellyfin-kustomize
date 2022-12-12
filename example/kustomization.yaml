@@ -1,0 +1,9 @@
+bases:
+  - "https://github.com/chriaack/jellyfin-kustomize.git"
+resources:
+  - 015-pv-config.yaml
+  - 016-pv-data.yaml
+  - 040-ingresses.yaml
+
+patchesStrategicMerge:
+  - 030-deployment.yaml

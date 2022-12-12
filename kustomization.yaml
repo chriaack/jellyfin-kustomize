@@ -1,4 +1,4 @@
 resources:
-  - 000-namespace.yml
-  - 010-service.yml
-  - 030-deployment.yml
+  - 000-namespace.yaml
+  - 010-service.yaml
+  - 030-deployment.yaml

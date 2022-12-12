@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+spec:
+  selector:
+    matchLabels:
+      app: jellyfin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jellyfin
+    spec:
+      containers:
+      - volumeMounts:
+          - mountPath: /data/media
+            name: jellyfin-data
+          - mountPath: /config
+            name: jellyfin-config
+      volumes:
+      - name: jellyfin-data
+        persistentVolumeClaim:
+          claimName: jellyfin-data
+      - name: jellyfin-config
+        persistentVolumeClaim:
+          claimName: jellyfin-config

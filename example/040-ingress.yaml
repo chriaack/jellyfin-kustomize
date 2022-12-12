@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+  labels:
+    service: jellyfin
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 5m
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: <yoururl>
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jellyfin
+                port:
+                  number: 8096
