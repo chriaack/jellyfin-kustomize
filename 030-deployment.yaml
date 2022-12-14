@@ -18,7 +18,6 @@ spec:
       - name: jellyfin
         image: docker.io/jellyfin/jellyfin:10.8.7
         imagePullPolicy: IfNotPresent
-        name: jellyfin
         ports:
         - containerPort: 8096
           protocol: TCP
