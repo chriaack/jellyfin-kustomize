@@ -1,3 +1,7 @@
+# Deprecated please use [helm chart](https://github.com/jellyfin/jellyfin-helm/tree/master/charts/jellyfin)
+
+The deployment still works but not sure for how long!
+
 # Jellyfin kustomize
 
 Project that hold an example to deploy jellyfin via k8s kustomize.
